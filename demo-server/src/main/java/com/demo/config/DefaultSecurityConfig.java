@@ -15,7 +15,7 @@
  */
 package com.demo.config;
 
-import sample.federation.FederatedIdentityAuthenticationSuccessHandler;
+import com.demo.federation.FederatedIdentityAuthenticationSuccessHandler;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

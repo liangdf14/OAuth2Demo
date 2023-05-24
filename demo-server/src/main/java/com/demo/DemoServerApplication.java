@@ -22,11 +22,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.0
  */
 @SpringBootApplication
-public class DemoAuthorizationServerApplication {
+public class DemoServerApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(DemoAuthorizationServerApplication.class, args);
+		SpringApplication.run(DemoServerApplication.class, args);
 	}
 
 }

@@ -21,10 +21,10 @@ import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
-import sample.authentication.DeviceClientAuthenticationProvider;
-import sample.federation.FederatedIdentityIdTokenCustomizer;
-import sample.jose.Jwks;
-import sample.web.authentication.DeviceClientAuthenticationConverter;
+import com.demo.authentication.DeviceClientAuthenticationProvider;
+import com.demo.federation.FederatedIdentityIdTokenCustomizer;
+import com.demo.jose.Jwks;
+import com.demo.web.authentication.DeviceClientAuthenticationConverter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
