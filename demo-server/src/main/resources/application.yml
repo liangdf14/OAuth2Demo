@@ -8,14 +8,18 @@ spring:
         registration:
           google-idp:
             provider: google
+            ## client-id: ${GOOGLE_CLIENT_ID:google-client-id}
+            ## client-secret: ${GOOGLE_CLIENT_SECRET:google-client-secret}
             client-id: ${GOOGLE_CLIENT_ID:google-client-id}
             client-secret: ${GOOGLE_CLIENT_SECRET:google-client-secret}
             scope: openid, https://www.googleapis.com/auth/userinfo.profile, https://www.googleapis.com/auth/userinfo.email
             client-name: Sign in with Google
           github-idp:
             provider: github
-            client-id: ${GITHUB_CLIENT_ID:github-client-id}
-            client-secret: ${GITHUB_CLIENT_SECRET:github-client-secret}
+            client-id: ${GITHUB_CLIENT_ID:87b16288b4c9120c59a7}
+            client-secret: ${GITHUB_CLIENT_SECRET:5c2c253bc50fbc2cb86bd66b287ca98c0f938ea8}
+            ## client-id: 87b16288b4c9120c59a7
+            ## client-secret: 5c2c253bc50fbc2cb86bd66b287ca98c0f938ea8
             scope: user:email, read:user
             client-name: Sign in with GitHub
         provider:

@@ -47,23 +47,6 @@ public class AuthorizationController {
 		this.messagesBaseUri = messagesBaseUri;
 	}
 
-	@GetMapping(value = "/authorize", params = "grant_type=authorization_code")
-	public String authorizationCodeGrant(Model model,
-			@RegisteredOAuth2AuthorizedClient("messaging-client-authorization-code")
-					OAuth2AuthorizedClient authorizedClient) {
-
-		String[] messages = this.webClient
-				.get()
-				.uri(this.messagesBaseUri)
-				.attributes(oauth2AuthorizedClient(authorizedClient))
-				.retrieve()
-				.bodyToMono(String[].class)
-				.block();
-		model.addAttribute("messages", messages);
-
-		return "index";
-	}
-
 	// '/authorized' is the registered 'redirect_uri' for authorization_code
 	@GetMapping(value = "/authorized", params = OAuth2ParameterNames.ERROR)
 	public String authorizationFailed(Model model, HttpServletRequest request) {
@@ -76,6 +59,23 @@ public class AuthorizationController {
 							request.getParameter(OAuth2ParameterNames.ERROR_URI))
 			);
 		}
+
+		return "index";
+	}
+
+	@GetMapping(value = "/authorize", params = "grant_type=authorization_code")
+	public String authorizationCodeGrant(Model model,
+										 @RegisteredOAuth2AuthorizedClient("messaging-client-authorization-code")
+										 OAuth2AuthorizedClient authorizedClient) {
+
+		String[] messages = this.webClient
+				.get()
+				.uri(this.messagesBaseUri)
+				.attributes(oauth2AuthorizedClient(authorizedClient))
+				.retrieve()
+				.bodyToMono(String[].class)
+				.block();
+		model.addAttribute("messages", messages);
 
 		return "index";
 	}
