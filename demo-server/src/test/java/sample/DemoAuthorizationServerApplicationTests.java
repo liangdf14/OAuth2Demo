@@ -101,7 +101,7 @@ public class DemoAuthorizationServerApplicationTests {
 		// Log in
 		this.webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
 		this.webClient.getOptions().setRedirectEnabled(false);
-		signIn(this.webClient.getPage("/login"), "user1", "password");
+		signIn(this.webClient.getPage("/login"), "demo", "password");
 
 		// Request token
 		WebResponse response = this.webClient.getPage(AUTHORIZATION_REQUEST).getWebResponse();
