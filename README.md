@@ -56,3 +56,9 @@ http://localhost:8080
 The username / password is `demo` / `password`.
 
 You can also use your Github account to log in as well.
+
+
+# How to check logs
+```
+docker logs demo_vm
+```
