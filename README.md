@@ -1,22 +1,56 @@
-# OAuth2Demo
-A Spring Boot based OAuth 2.0 Demo
+# Introduction
+This is a project demonstrating how to use Spring Boot to implement OAuth2.0 authentication and authorization.
 
-# Start server
-```
-./gradlew -b demo-server/build.gradle bootRun
-```
+# Prerequisites
+ - Docker
 
-# Start client
+# Create Docker Image
 ```
-./gradlew -b demo-client/build.gradle bootRun
+docker build -t demo_vm .
 ```
 
-# Start resource
+If you are using M1 or M2 CPU Mac, you need to use `--platform linux/amd64` to run the command.
 ```
-./gradlew -b demo-resource/build.gradle bootRun
+docker build --platform linux/amd64 -t demo_vm .
+```
+
+# Start Docker
+```
+docker run -it \
+--rm \
+--name demo_vm \
+-p 8080:8080 \
+-p 8090:8090 \
+-p 9000:9000 \
+demo_vm
+```
+
+If you are using M1 or M2 CPU Mac, you need to use `--platform linux/amd64` to run command.
+```
+docker run -it \
+--rm \
+--name demo_vm \
+--platform linux/amd64 \
+-p 8080:8080 \
+-p 8090:8090 \
+-p 9000:9000 \
+demo_vm
 ```
 
 # Open in browser
+
+When you see that the following logs output in the console log
+```
+...
+Tomcat started on port(s): 8080 (http) with context path ''
+...
+```
+
+You can open the following URL in the browser
 ```
 http://localhost:8080
 ```
+
+The username / password is `demo` / `password`.
+
+You can also use your Github account to log in as well.
