@@ -14,6 +14,8 @@ If you are using M1 or M2 CPU Mac, you need to use `--platform linux/amd64` to r
 docker build --platform linux/amd64 -t demo_vm .
 ```
 
+- Note: the step takes quite some time to finish. The time it needs depends on the spec of your machine. Please be patient.
+
 # Start Docker
 ```
 docker run -it \
