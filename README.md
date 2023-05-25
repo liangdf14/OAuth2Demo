@@ -5,6 +5,7 @@ This is a project demonstrating how to use Spring Boot to implement OAuth2.0 aut
  - Docker
 
 # Create Docker Image
+Checkout the project and run the following command in the root folder of the project.
 ```
 docker build -t demo_vm .
 ```
