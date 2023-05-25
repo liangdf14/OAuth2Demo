@@ -9,7 +9,7 @@ This is a project demonstrating how to use Spring Boot to implement OAuth2.0 aut
 docker build -t demo_vm .
 ```
 
-If you are using M1 or M2 CPU Mac, you need to use `--platform linux/amd64` to run the command.
+If you are using M1 or M2 CPU Mac, you need to add `--platform linux/amd64` to run the command.
 ```
 docker build --platform linux/amd64 -t demo_vm .
 ```
@@ -27,7 +27,7 @@ docker run -it \
 demo_vm
 ```
 
-If you are using M1 or M2 CPU Mac, you need to use `--platform linux/amd64` to run command.
+If you are using M1 or M2 CPU Mac, you need to add `--platform linux/amd64` to run command.
 ```
 docker run -it \
 --rm \
