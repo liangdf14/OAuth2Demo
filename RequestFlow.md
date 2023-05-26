@@ -3,6 +3,9 @@ This page is a quick analysis of the Spring implementation of OAuth 2.0 code flo
 
 The flow starts when a user opens http://localhost:8080/
 
+![alt text](https://github.com/liangdf14/OAuth2Demo/blob/main/images/img.png?raw=true)
+
+
 # Requests Analysis until login page
 
 
