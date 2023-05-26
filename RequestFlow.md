@@ -89,8 +89,11 @@ Enter username and password: demo / password, and "Sign in".
 
 # References:
 https://datatracker.ietf.org/doc/html/rfc6749#section-4.1
+
 https://docs.spring.io/spring-security/site/docs/5.0.x/reference/html/security-filter-chain.html
+
 https://blog.ndpar.com/2016/12/24/spring-oauth2/
+
 https://docs.spring.io/spring-security/reference/servlet/architecture.html
+
 https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#web.security.oauth2
-http://localhost:9000/.well-known/openid-configuration
